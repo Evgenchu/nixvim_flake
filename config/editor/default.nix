@@ -6,5 +6,6 @@
     ./indent-blankline.nix
     ./undotree.nix
     ./todo-comments.nix
+    ./navic.nix
   ];
 }
