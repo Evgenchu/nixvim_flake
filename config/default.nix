@@ -5,6 +5,7 @@
     ./theme/default.nix
     ./ui/default.nix
     ./utils/default.nix
-    ./git/default.nix 
+    ./git/default.nix
+    ./editor/default.nix 
   ];
 }
