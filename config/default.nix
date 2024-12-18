@@ -4,6 +4,7 @@
     ./keymaps.nix
     ./theme/default.nix
     ./ui/default.nix
-    ./utils/default.nix 
+    ./utils/default.nix
+    ./git/default.nix 
   ];
 }
