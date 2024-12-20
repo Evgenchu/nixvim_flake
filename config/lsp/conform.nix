@@ -106,6 +106,7 @@
             "black"
             "isort"
           ];
+          go = [ "gofumpt" ];
           lua = [ "stylua" ];
           nix = [ "nixfmt-rfc-style" ];
           markdown = [
@@ -146,6 +147,9 @@
           };
           jq = {
             command = "${lib.getExe pkgs.jq}";
+          };
+          gofumpt = {
+            command = "${lib.getExe pkgs.gofumpt}";
           };
           prettierd = {
             command = "${lib.getExe pkgs.prettierd}";
