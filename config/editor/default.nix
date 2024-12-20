@@ -7,5 +7,6 @@
     ./undotree.nix
     ./todo-comments.nix
     ./navic.nix
+    ./illuminate.nix
   ];
 }
