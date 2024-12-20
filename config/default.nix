@@ -7,6 +7,8 @@
     ./ui/default.nix
     ./utils/default.nix
     ./git/default.nix
-    ./editor/default.nix 
+    ./editor/default.nix
+    ./lsp/default.nix
+    ./cmp/default.nix
   ];
 }
