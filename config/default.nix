@@ -1,6 +1,8 @@
 {
   # Import all your configuration modules here
-  imports = [ 
+  imports = [
+    ./file_types.nix
+    ./autocmds.nix
     ./keymaps.nix
     ./settings.nix
     ./theme/default.nix
