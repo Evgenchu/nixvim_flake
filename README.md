@@ -1,4 +1,4 @@
-# Nixvim template
+# Nixvim template lol
 
 This template gives you a good starting point for configuring nixvim standalone.
 
