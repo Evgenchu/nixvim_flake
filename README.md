@@ -1,4 +1,4 @@
-# Nixvim template for Shrek enjoyers
+# Nixvim template for Shrek gigachads
 
 This template gives you a good starting point for configuring nixvim standalone.
 
