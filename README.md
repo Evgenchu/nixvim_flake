@@ -1,4 +1,4 @@
-# Nixvim template for Shrek based mfs
+# Nixvim template for Shrek mfs
 
 This template gives you a good starting point for configuring nixvim standalone.
 
