@@ -1,11 +1,16 @@
 {
+  lib,
+  pkgs,
+  ...
+}:
+{
   plugins.fidget = {
     enable = true;
-    logger = {
+    settings.logger = {
       level = "warn"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
-      floatPrecision = 1.0e-2; # Limit the number of decimals displayed for floats
+      float_precision = 1.0e-2; # Limit the number of decimals displayed for floats
     };
-    progress = {
+    settings.progress = {
       pollRate = 0; # How and when to poll for progress messages
       suppressOnInsert = true; # Suppress new messages while in insert mode
       ignoreDoneAlready = false; # Ignore new tasks that are already complete
@@ -58,20 +63,20 @@
         }; # Override options from the default notification config
       };
     };
-    notification = {
+    settings.notification = {
       pollRate = 10; # How frequently to update and render notifications
       filter = "info"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
       historySize = 128; # Number of removed messages to retain in history
       overrideVimNotify = true;
-      redirect = ''
+      redirect = lib.nixvim.mkRaw "
         function(msg, level, opts)
           if opts and opts.on_open then
-            return require("fidget.integration.nvim-notify").delegate(msg, level, opts)
+            return require(\"fidget.integration.nvim-notify\").delegate(msg, level, opts)
           end
         end
-      '';
+      ";
       configs = {
-        default = "require('fidget.notification').default_config";
+        default = lib.nixvim.mkRaw "require(\"fidget.notification\").default_config";
       };
 
       window = {
