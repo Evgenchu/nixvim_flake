@@ -17,6 +17,9 @@
         clangd = {
           enable = true;
         };
+        bashls = {
+          enable = true;
+        };
         html = {
           enable = true;
         };
