@@ -1,6 +1,6 @@
 {
   plugins.trouble = {
-    enabled = true;
+    enable = true;
     autoLoad = true;
   };
 }
