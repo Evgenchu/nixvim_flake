@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   plugins = {
     lsp-lines = {
@@ -140,6 +140,9 @@
       };
     };
   };
+  diagnostics = {
+    virtual_lines.only_current_line = true;
+  };
   extraPlugins = with pkgs.vimPlugins; [
     ansible-vim
   ];
@@ -158,10 +161,6 @@
         border = _border
       }
     )
-
-    vim.diagnostic.config{
-      float={border=_border}
-    };
 
     require('lspconfig.ui.windows').default_options = {
       border = _border
