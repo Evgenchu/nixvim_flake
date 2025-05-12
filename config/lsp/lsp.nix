@@ -140,7 +140,7 @@
       };
     };
   };
-  diagnostics = {
+  diagnostics.settings = {
     virtual_lines.only_current_line = true;
   };
   extraPlugins = with pkgs.vimPlugins; [
