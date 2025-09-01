@@ -4,5 +4,6 @@
     ./trouble.nix
     ./fidget.nix
     ./lsp.nix
+    ./typst.nix
   ];
 }
