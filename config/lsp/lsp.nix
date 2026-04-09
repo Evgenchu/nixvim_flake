@@ -1,20 +1,23 @@
-{ pkgs, config, ... }:
 {
   plugins = {
     lsp-lines = {
       enable = true;
     };
-    lsp-format = {
-      enable = true;
-    };
     lsp = {
       enable = true;
       inlayHints = true;
+      onAttach = ''
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          callback = function()
+            vim.lsp.buf.format({ async = false })
+          end,
+        })
+      '';
       servers = {
-        clangd = {
+        bashls = {
           enable = true;
         };
-        bashls = {
+        clangd = {
           enable = true;
         };
         lua_ls = {
